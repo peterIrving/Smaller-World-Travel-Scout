@@ -39,8 +39,6 @@ class EditArtistsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-       // let file = Bundle.main.path(forResource: "PetersData", ofType: "txt")!
         let json = petersData.data(using: .utf8)!
         
         do {
@@ -49,6 +47,17 @@ class EditArtistsVC: UIViewController {
             print("error decoding json")
         }
         
+//        var artistArray: String =
+//
+//        for i in (topArtists?.items)! {
+//            artistArray.append(contentsOf: topArtists?.items![i].name)
+//        }
+//
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination: LocationVC = segue.destination as! LocationVC
+        destination.artistArray = topArtists
     }
     
 }

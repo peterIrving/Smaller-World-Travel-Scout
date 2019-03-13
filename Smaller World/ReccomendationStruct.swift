@@ -9,10 +9,21 @@
 import Foundation
 
 struct Reccomendations: Codable {
-    let artists, hotels, restaurants: Artists?
+    let artists: Artists?
+    let hotels, restaurants: Hotels?
 }
 
 struct Artists: Codable {
     let affinity: Double?
     let reccs: [String]?
+}
+
+struct Hotels: Codable {
+    let affinity: Double?
+    let location: [Location]?
+    let reccs: [String]?
+}
+
+struct Location: Codable {
+    let lat, lng: Double?
 }

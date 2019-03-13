@@ -15,6 +15,8 @@ class HotelVC: UIViewController {
     var lat: Double = 0
     var lon: Double = 0
     
+    let places = recomendations?.restaurants
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,8 +26,8 @@ class HotelVC: UIViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
         
-        lat = 25
-        lon = 40
+        lat = (places?.location![indexPath.row].lat)!
+        lon = (places?.location![indexPath.row].lng!)!
         
         performSegue(withIdentifier: "goToWebKit", sender: self)
     }
@@ -33,6 +35,7 @@ class HotelVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination: WebKitVC = segue.destination as! WebKitVC
         destination.lat = lat
+        destination.lon = lon
     }
 }
 
@@ -56,9 +59,8 @@ extension HotelVC: UITableViewDataSource, UITableViewDelegate {
         }
         cell.hotelImageView!.image = UIImage(named: imageString!)
         
-        let hotels = recomendations?.hotels?.reccs
         
-        cell.hotelNameLabel.text = hotels![indexPath.row]
+        cell.hotelNameLabel.text = places!.reccs![indexPath.row]
         
         return cell
     }

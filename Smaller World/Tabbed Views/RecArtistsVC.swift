@@ -15,7 +15,14 @@ class RecArtistsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
+    }
+}
+
+extension RecArtistsVC: LocationVCDelegate {
+    func didFinishAPI() {
+        cv.reloadData()
     }
 }
 
@@ -23,7 +30,7 @@ extension RecArtistsVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (recomendations?.artists?.reccs!.count)!
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -49,7 +56,7 @@ extension RecArtistsVC: UICollectionViewDelegate, UICollectionViewDataSource {
         
         cell.artistImageView.image = UIImage(named: imageString!)
         
-        let artist = recomendations?.artists?.reccs![indexPath.row]
+        let artist = recomendations?.artists!.reccs![indexPath.row]
         
         cell.artistNameLabel.text = artist
         

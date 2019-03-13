@@ -15,6 +15,10 @@ func roundCorners(view:UIView) {
     view.layer.cornerRadius = view.frame.height / 2
 }
 
+protocol LocationVCDelegate {
+    func didFinishAPI()
+}
+
 class LocationVC: UIViewController {
 
     @IBOutlet weak var textField: UITextField! {
@@ -48,59 +52,80 @@ class LocationVC: UIViewController {
         }
     }
     
-    
     var coords: String?
-    
-   
+    let networking = NetworkingClient()
+    var delegate: LocationVCDelegate?
+    let loadingScreen = LoadingScreen()
+    var artistArray : TopArtists?
+    var artistString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        if let artistNames = artistArray?.items {
+            for i in 0...artistNames.count-1 {
+                print(i)
+                print(artistArray?.items?[i].name!)
+                if let name = artistArray?.items?[i].name! {
+                    if i == 9 {
+                        artistString += name
+                    } else {
+                        artistString += (name + "+")
+                    }
+                }
+            }
+        }
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    
+    
+    func loadData() {
+        let urlString = "https://sxswhack2019-travelscout.herokuapp.com/qloo/\(artistString)/\(coords!)"
+        let escapedAddress = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         
-//        if let barVC = segue.destination as? UITabBarController {
-//            barVC.viewControllers?.forEach {
-//                if let vc = $0 as? YourViewController {
-//                    vc.firstName = self.firstName
-//                    vc.lastName = self.lastName
-//                }
-//            }
-//        }
+        guard let url = URL(string: escapedAddress!) else { return }
         
-        let json = sampleRequestData.data(using: .utf8)!
+        print(url)
         
-        do {
-            recomendations = try JSONDecoder().decode(Reccomendations.self, from: json)
-        } catch {
-            print("error decoding json")
+        loadingScreen.startLoadingIcon(view: self.view, opasitatedBackground: true, isLargeIcon: true)
+        
+        networking.grabReccomendations(url) { (results, error) in
+            if let error = error {
+                print (error)
+                self.loadingScreen.stopLoadingScreen()
+                return
+            }
+            recomendations = results
+            self.delegate?.didFinishAPI()
+            self.loadingScreen.stopLoadingScreen()
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "goToReccomendations", sender: self)
+            }
+            
         }
-        
-        if let recStruct = recomendations {
-            print(recStruct.artists)
-        }
-
     }
     
     @IBAction func newYorkClick(_ sender: Any) {
         
-        coords = "40.758896, -73.985130/5"
-        performSegue(withIdentifier: "goToReccomendations", sender: self)
+        coords = "40.75/-73.98/5"
+        loadData()
     }
     
     @IBAction func austinClick(_ sender: Any) {
         
-        coords = "30.267153/-97.7430608/5"
-        performSegue(withIdentifier: "goToReccomendations", sender: self)
+        coords = "30.26/-97.74/5"
+        loadData()
     }
     
     @IBAction func chicagoClick(_ sender: Any) {
         
-        coords = "41.881832/ -87.623177/5"
+        coords = "45.52/-122.67/5"
+        loadData()
+       
+    }
+    
+    @IBAction func continueClick(_ sender: Any) {
         performSegue(withIdentifier: "goToReccomendations", sender: self)
     }
     
-
 }

@@ -16,22 +16,21 @@ class WebKitVC: UIViewController {
     let locationManager = CLLocationManager()
     
     var lat: Double = 0
-    let lon: Double = 0
+    var lon: Double = 0
     
     var annotation = MKPointAnnotation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("lat: ", lat)
         
-        let location = CLLocationCoordinate2D(latitude: 30.267153,longitude: -97.7430608)
+        let location = CLLocationCoordinate2D(latitude: lat,longitude: lon)
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
         
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 30.267153, longitude: -97.7430608)
+        annotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
         mapView.addAnnotation(annotation)
         
         checkLocationServices()

@@ -19,7 +19,7 @@ class RestaurantVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     
@@ -47,7 +47,19 @@ extension RestaurantVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tv.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath) as! RestaurantTVCell
         
-        let restaurants = recomendations?.restaurants?.reccs
+        
+        let imageString: String?
+        
+        if indexPath.row % 4 == 0 {
+            imageString = "rest1"
+        } else if indexPath.row % 3 == 0 {
+            imageString = "rest2"
+        } else if indexPath.row % 2 == 0 {
+            imageString = "rest3"
+        } else {
+            imageString = "rest4"
+        }
+        cell.restaurantImageView.image = UIImage(named: imageString!)
         
         cell.restaurantLabel.text = restaurants![indexPath.row]
         
