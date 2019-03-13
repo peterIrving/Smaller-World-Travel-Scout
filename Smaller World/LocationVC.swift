@@ -80,6 +80,10 @@ class LocationVC: UIViewController {
     
     
     func loadData() {
+        
+        print("artist String: ", artistString)
+        print("coords: ", coords)
+        
         let urlString = "https://sxswhack2019-travelscout.herokuapp.com/qloo/\(artistString)/\(coords!)"
         let escapedAddress = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         
@@ -91,7 +95,7 @@ class LocationVC: UIViewController {
         
         networking.grabReccomendations(url) { (results, error) in
             if let error = error {
-                print (error)
+                print ("error parsing json: ", error)
                 self.loadingScreen.stopLoadingScreen()
                 return
             }
@@ -106,26 +110,36 @@ class LocationVC: UIViewController {
     }
     
     @IBAction func newYorkClick(_ sender: Any) {
-        
+        austinClicked = false
         coords = "40.75/-73.98/5"
         loadData()
     }
     
     @IBAction func austinClick(_ sender: Any) {
-        
+        austinClicked = true
         coords = "30.26/-97.74/5"
         loadData()
     }
     
+    // actually portland
     @IBAction func chicagoClick(_ sender: Any) {
-        
+        austinClicked = false
         coords = "45.52/-122.67/5"
         loadData()
        
     }
     
-    @IBAction func continueClick(_ sender: Any) {
-        performSegue(withIdentifier: "goToReccomendations", sender: self)
+    // actually Seattle
+    @IBAction func londonClick(_ sender: Any) {
+        austinClicked = false
+        coords = "47.608013/-122.33516/15"
+        loadData()
     }
     
+    // actually LA
+    @IBAction func newOrleansClick(_ sender: Any) {
+        austinClicked = false
+        coords = "34.052235/-118.243683/15"
+        loadData()
+    }
 }

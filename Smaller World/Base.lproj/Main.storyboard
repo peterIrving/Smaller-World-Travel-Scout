@@ -85,11 +85,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="未命名作品 2" translatesAutoresizingMaskIntoConstraints="NO" id="Oj1-fb-o9W">
+                                <rect key="frame" x="182" y="83" width="153" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="84s-hd-23n"/>
+                                    <constraint firstAttribute="width" constant="153" id="Hyf-kS-C7R"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AzH-UL-K1M" firstAttribute="leading" secondItem="a4Z-cX-esM" secondAttribute="trailing" constant="8" id="10d-Qg-4Zi"/>
                             <constraint firstItem="U6J-Y8-ERr" firstAttribute="top" secondItem="K5H-e1-7fh" secondAttribute="bottom" constant="12" id="49q-ei-3rP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oj1-fb-o9W" secondAttribute="trailing" constant="40" id="8KH-B9-T4s"/>
                             <constraint firstItem="K5H-e1-7fh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="B88-U2-Qed"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hB3-JB-mWm" secondAttribute="trailing" constant="40" id="EVH-tm-844"/>
                             <constraint firstItem="zQw-Rd-U6G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="HHc-Gh-QSS"/>
@@ -100,6 +108,7 @@
                             <constraint firstItem="PaL-Cl-52V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xte-YK-KpG"/>
                             <constraint firstItem="PaL-Cl-52V" firstAttribute="top" secondItem="U6J-Y8-ERr" secondAttribute="bottom" constant="20" id="cA9-pg-Y2c"/>
                             <constraint firstItem="a4Z-cX-esM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="cT4-Lf-7it"/>
+                            <constraint firstItem="Oj1-fb-o9W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="f1M-z8-e80"/>
                             <constraint firstItem="H8L-hc-Jkl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gRk-tB-D32"/>
                             <constraint firstItem="H8L-hc-Jkl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="glK-WJ-G6n"/>
                             <constraint firstItem="K5H-e1-7fh" firstAttribute="top" secondItem="hB3-JB-mWm" secondAttribute="bottom" constant="12" id="lI7-6w-WyA"/>
@@ -401,27 +410,19 @@
                                     <action selector="chicagoClick:" destination="eai-qw-8ZW" eventType="touchUpInside" id="jbr-Fh-MOV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sy-5M-dXM">
-                                <rect key="frame" x="16" y="318" width="133" height="30"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="133" id="BFq-fs-F0Z"/>
-                                    <constraint firstAttribute="height" constant="30" id="cjt-wd-cjV"/>
-                                </constraints>
-                                <state key="normal" title="Funky Town, USA">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ruq-7k-oP6">
-                                <rect key="frame" x="165" y="318" width="113" height="30"/>
+                                <rect key="frame" x="16" y="318" width="123" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0k9-4c-WfQ"/>
-                                    <constraint firstAttribute="width" constant="113" id="eGq-qQ-rZ1"/>
+                                    <constraint firstAttribute="width" constant="123" id="eGq-qQ-rZ1"/>
                                 </constraints>
-                                <state key="normal" title="Funks Grove, IL">
+                                <state key="normal" title="Los Angeles, CA">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="newOrleansClick:" destination="eai-qw-8ZW" eventType="touchUpInside" id="5gV-70-tXk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -437,10 +438,8 @@
                             <constraint firstItem="JBz-KO-XE0" firstAttribute="leading" secondItem="oOH-2m-x19" secondAttribute="leading" constant="16" id="LFt-Rm-1fQ"/>
                             <constraint firstItem="z4H-ra-3z4" firstAttribute="top" secondItem="oOH-2m-x19" secondAttribute="top" constant="17" id="Xho-wF-ofP"/>
                             <constraint firstItem="jNC-iC-BZp" firstAttribute="top" secondItem="gun-Oz-nmp" secondAttribute="bottom" constant="92" id="YWl-vJ-aAF"/>
-                            <constraint firstItem="Ruq-7k-oP6" firstAttribute="leading" secondItem="8sy-5M-dXM" secondAttribute="trailing" constant="16" id="Z1l-G3-1SJ"/>
                             <constraint firstItem="gun-Oz-nmp" firstAttribute="top" secondItem="z4H-ra-3z4" secondAttribute="bottom" constant="8" id="hBs-Og-1Ld"/>
-                            <constraint firstItem="8sy-5M-dXM" firstAttribute="top" secondItem="JBz-KO-XE0" secondAttribute="bottom" constant="20" id="jMR-bW-s7T"/>
-                            <constraint firstItem="8sy-5M-dXM" firstAttribute="leading" secondItem="oOH-2m-x19" secondAttribute="leading" constant="16" id="lCh-uh-baZ"/>
+                            <constraint firstItem="Ruq-7k-oP6" firstAttribute="leading" secondItem="oOH-2m-x19" secondAttribute="leading" constant="16" id="o4h-Oy-ZEZ"/>
                             <constraint firstItem="4Am-AH-UfB" firstAttribute="top" secondItem="gun-Oz-nmp" secondAttribute="bottom" constant="92" id="pP6-An-xhu"/>
                             <constraint firstItem="gun-Oz-nmp" firstAttribute="leading" secondItem="oOH-2m-x19" secondAttribute="leading" constant="16" id="vsi-dZ-k38"/>
                             <constraint firstItem="Hpi-WJ-YU8" firstAttribute="top" secondItem="oOH-2m-x19" secondAttribute="top" id="wfd-HC-s93"/>
@@ -453,7 +452,6 @@
                         <outlet property="austinBtn" destination="jNC-iC-BZp" id="HXj-kk-jaE"/>
                         <outlet property="chicagoBtn" destination="4Am-AH-UfB" id="INj-M8-eKh"/>
                         <outlet property="funksGroveBtn" destination="Ruq-7k-oP6" id="nWP-rn-gNr"/>
-                        <outlet property="funkyTownBtn" destination="8sy-5M-dXM" id="8N7-CI-K44"/>
                         <outlet property="newYorkBtn" destination="JBz-KO-XE0" id="GJq-1L-jB4"/>
                         <outlet property="textField" destination="gun-Oz-nmp" id="QAg-nE-sLu"/>
                         <segue destination="3sC-Fw-Bzf" kind="show" identifier="goToReccomendations" id="0Bq-rz-fAb"/>
@@ -631,29 +629,29 @@
                                 <rect key="frame" x="0.0" y="154" width="375" height="464"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V7q-sw-n5r">
-                                    <size key="itemSize" width="128" height="141"/>
+                                    <size key="itemSize" width="374" height="88"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecArtistCell" id="nd1-9q-HdW" customClass="RecArtistCVCell" customModule="Smaller_World" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="141"/>
+                                        <rect key="frame" x="0.5" y="0.0" width="374" height="88"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="141"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-Mj-AiH" customClass="CustomImageView" customModule="Smaller_World" customModuleProvider="target">
-                                                    <rect key="frame" x="14" y="0.0" width="100" height="100"/>
+                                                    <rect key="frame" x="14" y="0.0" width="88" height="88"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Li0-Mj-AiH" secondAttribute="height" multiplier="1:1" id="fJV-U0-wxc"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Hot Chili Peppers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzr-qo-2vZ">
-                                                    <rect key="frame" x="8" y="103" width="112" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Hot Chili Peppers" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzr-qo-2vZ">
+                                                    <rect key="frame" x="114" y="16" width="252" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -662,12 +660,11 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Li0-Mj-AiH" firstAttribute="top" secondItem="nd1-9q-HdW" secondAttribute="top" id="7I3-Eh-HGn"/>
-                                            <constraint firstItem="rzr-qo-2vZ" firstAttribute="top" secondItem="Li0-Mj-AiH" secondAttribute="bottom" constant="3" id="Edv-YB-wrE"/>
-                                            <constraint firstAttribute="bottom" secondItem="rzr-qo-2vZ" secondAttribute="bottom" constant="2" id="Miy-OS-0Q4"/>
-                                            <constraint firstItem="rzr-qo-2vZ" firstAttribute="leading" secondItem="nd1-9q-HdW" secondAttribute="leading" constant="8" id="N5d-nb-Ev7"/>
+                                            <constraint firstAttribute="bottom" secondItem="Li0-Mj-AiH" secondAttribute="bottom" id="L1p-WX-fQS"/>
                                             <constraint firstItem="Li0-Mj-AiH" firstAttribute="leading" secondItem="nd1-9q-HdW" secondAttribute="leading" constant="14" id="Z1x-7P-gCK"/>
+                                            <constraint firstItem="rzr-qo-2vZ" firstAttribute="top" secondItem="nd1-9q-HdW" secondAttribute="top" constant="16" id="bR0-ss-Uap"/>
                                             <constraint firstAttribute="trailing" secondItem="rzr-qo-2vZ" secondAttribute="trailing" constant="8" id="grt-qY-scf"/>
-                                            <constraint firstAttribute="trailing" secondItem="Li0-Mj-AiH" secondAttribute="trailing" constant="14" id="tyx-Ks-A5j"/>
+                                            <constraint firstItem="rzr-qo-2vZ" firstAttribute="leading" secondItem="Li0-Mj-AiH" secondAttribute="trailing" constant="12" id="tl3-P8-K2G"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="artistImageView" destination="Li0-Mj-AiH" id="Bod-rK-gUc"/>
@@ -766,5 +763,6 @@
         <image name="icons8-location-logo-100" width="75" height="75"/>
         <image name="icons8-micro-100" width="75" height="75"/>
         <image name="未命名作品" width="1096" height="2031"/>
+        <image name="未命名作品 2" width="1004" height="532"/>
     </resources>
 </document>

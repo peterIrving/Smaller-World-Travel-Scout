@@ -8,9 +8,13 @@
 
 import UIKit
 
+var austinClicked = false
+
 class RecArtistsVC: UIViewController {
 
     @IBOutlet weak var cv: UICollectionView!
+    
+    let austinArtists = ["J-Hen","Hikes","J. Soulja","Ume","Western Youth","Go Fever","San Saba Country","Calliope Musicals","Deanna Wheeler","Hard Proof","Ladi Earth","Explosions in the Sky","Will Johnson","Gina Chavez","A. Sinclair"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,36 +34,22 @@ extension RecArtistsVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 15
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = cv.dequeueReusableCell(withReuseIdentifier: "RecArtistCell", for: indexPath) as! RecArtistCVCell
         
-        var imageString: String?
-        
-        if indexPath.row % 7 == 0 {
-            imageString = "bruno"
-        } else if indexPath.row % 6 == 0 {
-            imageString = "scary"
-        } else if indexPath.row % 5 == 0 {
-            imageString = "elton"
-        } else if indexPath.row % 4 == 0 {
-            imageString = "guitarist"
-        } else if indexPath.row % 3 == 0 {
-            imageString = "sax"
-        } else if indexPath.row % 2 == 0 {
-            imageString = "elvis"
-        } else {
-            imageString = "strings"
-        }
+        var imageString: String? = "avatar"
         
         cell.artistImageView.image = UIImage(named: imageString!)
         
-        let artist = recomendations?.artists!.reccs![indexPath.row]
-        
-        cell.artistNameLabel.text = artist
-        
+        if austinClicked {
+            cell.artistNameLabel.text = austinArtists[indexPath.row]
+        } else {
+            let artist = recomendations?.artists!.reccs![indexPath.row]
+            cell.artistNameLabel.text = artist
+        }
         return cell
     }
     

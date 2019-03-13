@@ -49,16 +49,8 @@ extension HotelVC: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tv.dequeueReusableCell(withIdentifier: "hotelCell", for: indexPath) as! HotelTVCell
         
-        var imageString: String?
-        if indexPath.row % 3 == 0 {
-            imageString = "hotel1"
-        } else if indexPath.row % 2 == 0 {
-            imageString = "hotel2"
-        } else {
-            imageString = "hotel3"
-        }
-        cell.hotelImageView!.image = UIImage(named: imageString!)
-        
+        var imageString: String = "placeholder"
+        cell.hotelImageView!.image = UIImage(named: imageString)
         
         cell.hotelNameLabel.text = places!.reccs![indexPath.row]
         
