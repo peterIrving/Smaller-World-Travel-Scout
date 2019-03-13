@@ -10,7 +10,12 @@ import UIKit
 
 class WelcomeVC: UIViewController {
 
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var button: UIButton! {
+        didSet{
+            button.clipsToBounds = true
+            button.layer.cornerRadius = button.frame.height / 2
+        }
+    }
     
     @IBOutlet weak var emailTxtFld: UITextField! {
         didSet{

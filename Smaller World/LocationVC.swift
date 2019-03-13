@@ -8,16 +8,37 @@
 
 import UIKit
 
+var recomendations: Reccomendations?
+
+func roundCorners(view:UIView) {
+    view.clipsToBounds = true
+    view.layer.cornerRadius = view.frame.height / 2
+}
+
 class LocationVC: UIViewController {
 
+    @IBOutlet weak var textField: UITextField! {
+        didSet{
+            roundCorners(view: textField)
+        }
+    }
+    @IBOutlet weak var newYorkBtn: UIButton!
+    @IBOutlet weak var austinBtn: UIButton!
+    @IBOutlet weak var chicagoBtn: UIButton!
+    @IBOutlet weak var funkyTownBtn: UIButton!
+    @IBOutlet weak var funksGroveBtn: UIButton!
+    
+    
     var coords: String?
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
 //        if let barVC = segue.destination as? UITabBarController {
@@ -28,6 +49,19 @@ class LocationVC: UIViewController {
 //                }
 //            }
 //        }
+        
+        let json = sampleRequestData.data(using: .utf8)!
+        
+        do {
+            recomendations = try JSONDecoder().decode(Reccomendations.self, from: json)
+        } catch {
+            print("error decoding json")
+        }
+        
+        if let recStruct = recomendations {
+            print(recStruct.artists)
+        }
+
     }
     
     @IBAction func newYorkClick(_ sender: Any) {

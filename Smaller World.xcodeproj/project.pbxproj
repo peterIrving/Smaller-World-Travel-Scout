@@ -22,6 +22,11 @@
 		9DF0A11D2238D54D00747A85 /* RecArtistCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0A11C2238D54D00747A85 /* RecArtistCVCell.swift */; };
 		9DF0A11F2238D7B200747A85 /* RestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0A11E2238D7B200747A85 /* RestaurantVC.swift */; };
 		9DF0A1212238D9F200747A85 /* HotelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0A1202238D9F200747A85 /* HotelVC.swift */; };
+		9DF0A1232238DF8E00747A85 /* HotelTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0A1222238DF8E00747A85 /* HotelTVCell.swift */; };
+		9DF0A1252238E98700747A85 /* SampleRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0A1242238E98700747A85 /* SampleRequestData.swift */; };
+		9DF0A1272238EB4600747A85 /* ReccomendationStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0A1262238EB4600747A85 /* ReccomendationStruct.swift */; };
+		9DF0A1292238EF0400747A85 /* RestaurantTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0A1282238EF0400747A85 /* RestaurantTVCell.swift */; };
+		9DF0A12B2238F61700747A85 /* WebKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0A12A2238F61700747A85 /* WebKitVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		9DF0A11C2238D54D00747A85 /* RecArtistCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecArtistCVCell.swift; sourceTree = "<group>"; };
 		9DF0A11E2238D7B200747A85 /* RestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantVC.swift; sourceTree = "<group>"; };
 		9DF0A1202238D9F200747A85 /* HotelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelVC.swift; sourceTree = "<group>"; };
+		9DF0A1222238DF8E00747A85 /* HotelTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelTVCell.swift; sourceTree = "<group>"; };
+		9DF0A1242238E98700747A85 /* SampleRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRequestData.swift; sourceTree = "<group>"; };
+		9DF0A1262238EB4600747A85 /* ReccomendationStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReccomendationStruct.swift; sourceTree = "<group>"; };
+		9DF0A1282238EF0400747A85 /* RestaurantTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTVCell.swift; sourceTree = "<group>"; };
+		9DF0A12A2238F61700747A85 /* WebKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,7 @@
 				9DF0A10422386F9300747A85 /* EditArtistsVC.swift */,
 				9DF0A1172238D2E400747A85 /* ArtistCVCell.swift */,
 				9DF0A1152238C41500747A85 /* LocationVC.swift */,
+				9DF0A12A2238F61700747A85 /* WebKitVC.swift */,
 				9DF0A1192238D42400747A85 /* Tabbed Views */,
 				9DF0A0F622386C9600747A85 /* Main.storyboard */,
 				9DF0A0F922386C9800747A85 /* Assets.xcassets */,
@@ -87,6 +98,8 @@
 				9DF0A10F2238AFA200747A85 /* CustomImageView.swift */,
 				9DF0A1112238AFD200747A85 /* TopArtists.swift */,
 				9DF0A1132238B34E00747A85 /* PetersSpotifyData.swift */,
+				9DF0A1242238E98700747A85 /* SampleRequestData.swift */,
+				9DF0A1262238EB4600747A85 /* ReccomendationStruct.swift */,
 			);
 			path = "Smaller World";
 			sourceTree = "<group>";
@@ -97,7 +110,9 @@
 				9DF0A11A2238D44200747A85 /* RecArtistsVC.swift */,
 				9DF0A11C2238D54D00747A85 /* RecArtistCVCell.swift */,
 				9DF0A11E2238D7B200747A85 /* RestaurantVC.swift */,
+				9DF0A1282238EF0400747A85 /* RestaurantTVCell.swift */,
 				9DF0A1202238D9F200747A85 /* HotelVC.swift */,
+				9DF0A1222238DF8E00747A85 /* HotelTVCell.swift */,
 			);
 			path = "Tabbed Views";
 			sourceTree = "<group>";
@@ -176,15 +191,20 @@
 				9DF0A0F522386C9600747A85 /* WelcomeVC.swift in Sources */,
 				9DF0A10522386F9300747A85 /* EditArtistsVC.swift in Sources */,
 				9DF0A11D2238D54D00747A85 /* RecArtistCVCell.swift in Sources */,
+				9DF0A1252238E98700747A85 /* SampleRequestData.swift in Sources */,
+				9DF0A1292238EF0400747A85 /* RestaurantTVCell.swift in Sources */,
 				9DF0A1122238AFD200747A85 /* TopArtists.swift in Sources */,
 				9DF0A0F322386C9600747A85 /* AppDelegate.swift in Sources */,
+				9DF0A1232238DF8E00747A85 /* HotelTVCell.swift in Sources */,
 				9DF0A1212238D9F200747A85 /* HotelVC.swift in Sources */,
+				9DF0A1272238EB4600747A85 /* ReccomendationStruct.swift in Sources */,
 				9DF0A1162238C41500747A85 /* LocationVC.swift in Sources */,
 				9DF0A1182238D2E400747A85 /* ArtistCVCell.swift in Sources */,
 				9DF0A1102238AFA200747A85 /* CustomImageView.swift in Sources */,
 				9DF0A11B2238D44200747A85 /* RecArtistsVC.swift in Sources */,
 				9DF0A1142238B34E00747A85 /* PetersSpotifyData.swift in Sources */,
 				9DF0A11F2238D7B200747A85 /* RestaurantVC.swift in Sources */,
+				9DF0A12B2238F61700747A85 /* WebKitVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

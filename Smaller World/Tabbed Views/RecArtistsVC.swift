@@ -23,13 +23,15 @@ extension RecArtistsVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return (recomendations?.artists?.reccs!.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = cv.dequeueReusableCell(withReuseIdentifier: "RecArtistCell", for: indexPath) as! RecArtistCVCell
         
-        cell.artistNameLabel.text = "hey"
+        let artist = recomendations?.artists?.reccs![indexPath.row]
+        
+        cell.artistNameLabel.text = artist
         
         return cell
     }

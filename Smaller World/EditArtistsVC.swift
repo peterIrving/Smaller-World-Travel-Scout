@@ -10,6 +10,28 @@ import UIKit
 
 class EditArtistsVC: UIViewController {
     
+    @IBOutlet weak var continueBtn: UIButton!{
+        didSet{
+            continueBtn.clipsToBounds = true
+            continueBtn.layer.cornerRadius = continueBtn.frame.height / 2
+            
+        }
+    }
+    @IBOutlet weak var grungeView: UIView!{
+        didSet{
+            grungeView.clipsToBounds = true
+            grungeView.layer.cornerRadius = grungeView.frame.height / 2
+            
+        }
+    }
+    @IBOutlet weak var britishView: UIView!{
+        didSet{
+            britishView.clipsToBounds = true
+            britishView.layer.cornerRadius = britishView.frame.height / 2
+            
+        }
+    }
+    
     var topArtists: TopArtists?
     
     @IBOutlet weak var cv: UICollectionView!
@@ -25,10 +47,6 @@ class EditArtistsVC: UIViewController {
             topArtists = try JSONDecoder().decode(TopArtists.self, from: json)
         } catch {
             print("error decoding json")
-        }
-        
-        if let topArtistJSON = topArtists {
-            print(topArtistJSON.items![0].images![0])
         }
         
     }

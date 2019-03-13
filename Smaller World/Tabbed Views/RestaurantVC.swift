@@ -12,23 +12,44 @@ class RestaurantVC: UIViewController {
 
     @IBOutlet weak var tv: UITableView!
     
+    let restaurants = recomendations?.restaurants?.reccs
     
+    var lat: Double = 0.0
+    var lon: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        
+        lat = 25
+        lon = 40
+        
+        performSegue(withIdentifier: "goToWebKit", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination: WebKitVC = segue.destination as! WebKitVC
+        destination.lat = lat
     }
     
 }
 
 extension RestaurantVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tv.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath)
+        let cell = tv.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath) as! RestaurantTVCell
+        
+        let restaurants = recomendations?.restaurants?.reccs
+        
+        cell.restaurantLabel.text = restaurants![indexPath.row]
         
         return cell
     }
