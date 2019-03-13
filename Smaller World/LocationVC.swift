@@ -22,11 +22,31 @@ class LocationVC: UIViewController {
             roundCorners(view: textField)
         }
     }
-    @IBOutlet weak var newYorkBtn: UIButton!
-    @IBOutlet weak var austinBtn: UIButton!
-    @IBOutlet weak var chicagoBtn: UIButton!
-    @IBOutlet weak var funkyTownBtn: UIButton!
-    @IBOutlet weak var funksGroveBtn: UIButton!
+    @IBOutlet weak var newYorkBtn: UIButton! {
+        didSet{
+            roundCorners(view: newYorkBtn)
+        }
+    }
+    @IBOutlet weak var austinBtn: UIButton! {
+        didSet{
+            roundCorners(view: austinBtn)
+        }
+    }
+    @IBOutlet weak var chicagoBtn: UIButton! {
+        didSet{
+            roundCorners(view: chicagoBtn)
+        }
+    }
+    @IBOutlet weak var funkyTownBtn: UIButton! {
+        didSet{
+            roundCorners(view: funkyTownBtn)
+        }
+    }
+    @IBOutlet weak var funksGroveBtn: UIButton! {
+        didSet{
+            roundCorners(view: funksGroveBtn)
+        }
+    }
     
     
     var coords: String?

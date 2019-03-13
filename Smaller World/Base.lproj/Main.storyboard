@@ -22,10 +22,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spotify_Logo_CMYK_Green" translatesAutoresizingMaskIntoConstraints="NO" id="AzH-UL-K1M">
-                                <rect key="frame" x="155.5" y="197" width="50" height="21"/>
+                                <rect key="frame" x="155.5" y="192" width="75" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="D3Q-Xj-rdF"/>
-                                    <constraint firstAttribute="height" constant="21" id="mbv-8z-H5w"/>
+                                    <constraint firstAttribute="width" constant="75" id="D3Q-Xj-rdF"/>
+                                    <constraint firstAttribute="height" constant="31" id="mbv-8z-H5w"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U6J-Y8-ERr">
@@ -94,7 +94,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hB3-JB-mWm" secondAttribute="trailing" constant="40" id="EVH-tm-844"/>
                             <constraint firstItem="zQw-Rd-U6G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="HHc-Gh-QSS"/>
                             <constraint firstItem="U6J-Y8-ERr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Ieb-KE-3ma"/>
-                            <constraint firstItem="AzH-UL-K1M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="133" id="MyS-tk-j5B"/>
+                            <constraint firstItem="AzH-UL-K1M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="MyS-tk-j5B"/>
                             <constraint firstItem="a4Z-cX-esM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="133" id="Qws-Ns-FEp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U6J-Y8-ERr" secondAttribute="trailing" constant="40" id="Vkw-oR-cDK"/>
                             <constraint firstItem="PaL-Cl-52V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xte-YK-KpG"/>
@@ -388,13 +388,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Am-AH-UfB">
-                                <rect key="frame" x="243" y="268" width="87" height="30"/>
+                                <rect key="frame" x="243" y="268" width="98" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="87" id="0ef-xP-fHz"/>
+                                    <constraint firstAttribute="width" constant="98" id="0ef-xP-fHz"/>
                                     <constraint firstAttribute="height" constant="30" id="Tjn-ad-ZBA"/>
                                 </constraints>
-                                <state key="normal" title="Chicago, IL">
+                                <state key="normal" title="Portland, OR">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -699,7 +699,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="141"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-Mj-AiH" customClass="CustomImageView" customModule="Smaller_World" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-Mj-AiH" customClass="CustomImageView" customModule="Smaller_World" customModuleProvider="target">
                                                     <rect key="frame" x="14" y="0.0" width="100" height="100"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
