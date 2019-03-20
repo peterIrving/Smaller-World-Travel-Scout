@@ -10,34 +10,39 @@ import UIKit
 
 class WelcomeVC: UIViewController {
 
-    @IBOutlet weak var button: UIButton! {
+    @IBOutlet weak var loginContainerView: UIView! {
         didSet{
-            button.clipsToBounds = true
-            button.layer.cornerRadius = button.frame.height / 2
+            loginContainerView.clipsToBounds = true
+            loginContainerView.layer.cornerRadius = 15
         }
     }
     
-    @IBOutlet weak var emailTxtFld: UITextField! {
+    @IBOutlet weak var emailContainer: UIView!{
         didSet{
-            emailTxtFld.clipsToBounds = true
-            emailTxtFld.layer.cornerRadius = emailTxtFld.frame.height / 2
+            emailContainer.clipsToBounds = true
+            emailContainer.layer.cornerRadius = 15
         }
     }
+    @IBOutlet weak var emailTxtFld: UITextField!
     
-    @IBOutlet weak var pswdTxtFld: UITextField!{
+    @IBOutlet weak var passwordContainer: UIView!{
         didSet{
-            pswdTxtFld.clipsToBounds = true
-            pswdTxtFld.layer.cornerRadius = pswdTxtFld.frame.height / 2
+            passwordContainer.clipsToBounds = true
+            passwordContainer.layer.cornerRadius = 15
         }
     }
-    
-    
+    @IBOutlet weak var passwordTxtFld: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
-
+    @IBAction func signInClick(_ sender: Any) {
+   
+        performSegue(withIdentifier: "loginSegue", sender: self)
+    
+    }
+    
 }
 

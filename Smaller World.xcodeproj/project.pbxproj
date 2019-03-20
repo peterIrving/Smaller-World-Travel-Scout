@@ -29,6 +29,7 @@
 		9DF0A12B2238F61700747A85 /* WebKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0A12A2238F61700747A85 /* WebKitVC.swift */; };
 		9DF0A12D2239192200747A85 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0A12C2239192200747A85 /* Networking.swift */; };
 		9DF0A131223938CC00747A85 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0A130223938CC00747A85 /* LoadingScreen.swift */; };
+		9DF0A7E42241C5B200747A85 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0A7E32241C5B200747A85 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		9DF0A12A2238F61700747A85 /* WebKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitVC.swift; sourceTree = "<group>"; };
 		9DF0A12C2239192200747A85 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		9DF0A130223938CC00747A85 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		9DF0A7E32241C5B200747A85 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		9DF0A0F122386C9600747A85 /* Smaller World */ = {
 			isa = PBXGroup;
 			children = (
+				9DF0A7E22241C59D00747A85 /* Helpers */,
 				9DF0A0F222386C9600747A85 /* AppDelegate.swift */,
 				9DF0A0F422386C9600747A85 /* WelcomeVC.swift */,
 				9DF0A10422386F9300747A85 /* EditArtistsVC.swift */,
@@ -121,6 +124,14 @@
 				9DF0A1222238DF8E00747A85 /* HotelTVCell.swift */,
 			);
 			path = "Tabbed Views";
+			sourceTree = "<group>";
+		};
+		9DF0A7E22241C59D00747A85 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0A7E32241C5B200747A85 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				9DF0A1182238D2E400747A85 /* ArtistCVCell.swift in Sources */,
 				9DF0A1102238AFA200747A85 /* CustomImageView.swift in Sources */,
 				9DF0A11B2238D44200747A85 /* RecArtistsVC.swift in Sources */,
+				9DF0A7E42241C5B200747A85 /* Extensions.swift in Sources */,
 				9DF0A1142238B34E00747A85 /* PetersSpotifyData.swift in Sources */,
 				9DF0A11F2238D7B200747A85 /* RestaurantVC.swift in Sources */,
 				9DF0A12B2238F61700747A85 /* WebKitVC.swift in Sources */,

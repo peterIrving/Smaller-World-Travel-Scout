@@ -46,13 +46,6 @@ class EditArtistsVC: UIViewController {
         } catch {
             print("error decoding json")
         }
-        
-//        var artistArray: String =
-//
-//        for i in (topArtists?.items)! {
-//            artistArray.append(contentsOf: topArtists?.items![i].name)
-//        }
-//
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -64,7 +57,8 @@ class EditArtistsVC: UIViewController {
 
 
 
-extension EditArtistsVC: UICollectionViewDataSource,UICollectionViewDelegate {
+extension EditArtistsVC: UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
